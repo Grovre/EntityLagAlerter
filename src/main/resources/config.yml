@@ -1,0 +1,3 @@
+TotalEntityWarningThreshold: 10 # The amount of entities there needs to be in a chunk where the warning goes off
+EntityTypeWarningThreshold: 5 # The amount of a single type of entity in a chunk where the warning goes off
+CheckDelay: 125 # The delay before the server checks the loaded chunk if the entities were loaded. Raise this if your logs include many "Checked before entities were loaded."
