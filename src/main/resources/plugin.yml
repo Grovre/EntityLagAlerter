@@ -1,0 +1,7 @@
+name: EntityLagMachineDetector
+version: '${project.version}'
+main: me.grovre.lagmachinedetector.LagMachineDetector
+api-version: 1.18
+authors: [ PoptartFromPluto ]
+description: Detects an alarming amount of entities in a chunk on load
+website: https://github.com/grovre
