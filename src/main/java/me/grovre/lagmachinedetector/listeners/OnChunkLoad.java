@@ -37,12 +37,7 @@ public class OnChunkLoad implements Listener {
             // Fills entityMap with types and how many there are
             Map<EntityType, Integer> entityMap = new HashMap<>();
             for(Entity e : c.getEntities()) {
-                EntityType k = e.getType(); // k is EntityType in entityMap
-                if(entityMap.containsKey(k)) {
-                    entityMap.put(k, entityMap.get(k) + 1); // Sets EntityType key to previous value +1
-                } else {
-                    entityMap.put(k, 1); // Sets amount of EntityType to 1
-                }
+                entityMap.merge(e.getType(), 1, Integer::sum);
             }
 
             // Gets the total entity count and sends an alert if the total entity count is above the threshold
